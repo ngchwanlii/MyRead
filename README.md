@@ -1,6 +1,6 @@
 MyRead apps - Created by Jay Ng (ngchwanlii)
 
-Source folder link at: https://github.com/ngchwanlii/React/tree/master/Udacity%20Project/Apps/1.%20MyRead%20App/my-read-v2
+Source folder link at: https://github.com/ngchwanlii/MyRead
 <br />
 <br />
 Enable New Javascript Features on Google Chrome: chrome://flags/#enable-javascript-harmony (because I have used spread syntax in this project, just in case if your Google Chrome doesn't support latest ES syntax, you have to download the plugin from the link above)
