@@ -5,6 +5,12 @@ Source folder link at: https://github.com/ngchwanlii/MyRead
 <br />
 Enable New Javascript Features on Google Chrome: chrome://flags/#enable-javascript-harmony (because I have used spread syntax in this project, just in case if your Google Chrome doesn't support latest ES syntax, you have to download the plugin from the link above)
 
+# How to run the repository?
+1. git clone the src files to your local environment
+2. change directory to the folder you download the src files
+3. in terminal (mac book), type yarn start and the project will run in your local browser (http://localhost:3000/)
+
+
 Checklist:
 
 # Application Setup
