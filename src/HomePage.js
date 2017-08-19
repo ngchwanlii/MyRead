@@ -22,9 +22,12 @@ const ListBooks = (props) => {
   return null
 }
 
-const HomePage = (props) => {
+const convertTitle = (shelfType) => {
+  return (shelfType.charAt(0).toUpperCase() + shelfType.slice(1)).match(/[A-Z][a-z]+/g).join(" ")
+}
 
-  let {shelvesTitles, ...booksArg} = props
+const HomePage = (props) => {
+  let {shelves, showBook} = props
   return (
     <div className="list-books">
       <div className="list-books-title">
@@ -32,11 +35,11 @@ const HomePage = (props) => {
       </div>
       <div className="list-books-content">
         <div>
-          {Object.keys(shelvesTitles).map((shelfType) =>
+          {Object.keys(shelves).map((shelfType) =>
               <div key={shelfType} className="bookshelf">
-                <h2 className="bookshelf-title">{shelvesTitles[shelfType]}</h2>
+                <h2 className="bookshelf-title">{convertTitle(shelfType)}</h2>
                 <div className="bookshelf-books">
-                  <ListBooks shelfType={shelfType} {...booksArg}/>
+                  <ListBooks shelfType={shelfType} shelves={shelves} showBook={showBook}/>
                 </div>
               </div>
           )}
@@ -49,7 +52,6 @@ const HomePage = (props) => {
 
 /* typechecking with PropTypes */
 HomePage.propTypes = {
-  shelvesTitles: PropTypes.object,
   shelves: PropTypes.object,
   showBook: PropTypes.func
 }

@@ -10,7 +10,6 @@ import './App.css'
 
 class BooksApp extends React.Component {
   state = {
-    shelvesTitles: {},
     shelves: {
       "currentlyReading": {},
       "wantToRead": {},
@@ -153,14 +152,9 @@ class BooksApp extends React.Component {
           currentlyReading = {...this.state.shelves.currentlyReading},
           wantToRead = {...this.state.shelves.wantToRead},
           read = {...this.state.shelves.read},
-          shelvesTitles = {...this.state.shelvesTitles},
           books = {...this.state.books},
           bookShelve = {...this.state.bookShelve},
           bookRating = {...this.state.bookRating}
-
-      Object.keys(shelves).forEach((shelf) => {
-          shelvesTitles[shelf] = (shelf.charAt(0).toUpperCase() + shelf.slice(1)).match(/[A-Z][a-z]+/g).join(" ")
-      })
 
       BooksAPI.getAll().then((result) => {
         result.forEach((book) => {
@@ -181,20 +175,19 @@ class BooksApp extends React.Component {
         shelves["wantToRead"] = wantToRead
         shelves["read"] = read
         // set new state at once
-        this.setState((state) => ({shelvesTitles, shelves, books, bookShelve, bookRating}))
+        this.setState((state) => ({shelves, books, bookShelve, bookRating}))
       })
   }
 
   render() {
 
-    let {shelvesTitles, shelves} = this.state
+    let {shelves} = this.state
 
     return (
       <div className="app">
         <Route exact path="/" render={() => (
           <div>
             <HomePage
-              shelvesTitles={shelvesTitles}
               shelves={shelves}
               showBook={this.showBook}
             />
