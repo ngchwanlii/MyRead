@@ -14,7 +14,7 @@ Enable New Javascript Features on Google Chrome: chrome://flags/#enable-javascri
 Checklist:
 
 # Application Setup
-1. download the src folder at the link above, then open compiler and navigate to the folder, type 'yarn-star' to start launch it (done)
+1. download the src folder at the link above, then open compiler and navigate to the folder, type 'yarn-start' to start launch it (done)
 2.  README file to describe the project and some details (done)
 
 # Main page
