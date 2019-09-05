@@ -6,7 +6,7 @@
 ## Note:
 - Enable New Javascript Features on your web browser just in case your browser doesn't support ES snytax
 
-# Run program
+## Run program
 1. ```git clone``` this folder to your local environment from github repository
 2. ```cd``` to the folder where your downloaded files located at
 3. In terminal, install dependencies using ```yarn install```
