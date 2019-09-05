@@ -3,6 +3,9 @@
 ## Intro
 - MyRead is a web application for managing books. User can read, search, mark favorite books & put it into shelves, & give rating to a book.
 
+## Online Demo
+- [Demo](https://nostalgic-bassi-b92964.netlify.com/)
+
 ## Note:
 - Enable New Javascript Features on your web browser just in case your browser doesn't support ES snytax
 
